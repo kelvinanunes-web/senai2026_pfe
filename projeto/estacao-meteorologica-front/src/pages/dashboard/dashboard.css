@@ -1,0 +1,209 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(120deg, #7a0000, #000000);
+  min-height: 100vh;
+  color: white;
+}
+
+/* ========================= */
+/* CARDS */
+/* ========================= */
+.cards {
+  width: 90%;
+  margin: 40px auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid #ff0000;
+  border-radius: 20px;
+
+  padding: 25px;
+  text-align: center;
+
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7);
+
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.7);
+}
+
+.card h6 {
+  font-size: 14px;
+  color: #bbbbbb;
+  margin-bottom: 10px;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card h2 {
+  font-size: 32px;
+  color: #ff0000;
+}
+
+/* ========================= */
+/* GRÁFICOS */
+/* ========================= */
+.graficos {
+  width: 90%;
+  margin: 40px auto;
+
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid #ff0000;
+  border-radius: 20px;
+
+  padding: 25px;
+
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+.graficos h6 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: white;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.graficos div {
+  width: 100%;
+  height: 250px;
+
+  border-radius: 15px;
+  border: 2px dashed rgba(255, 0, 0, 0.7);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ========================= */
+/* TABELA */
+/* ========================= */
+.tabela {
+  width: 90%;
+  margin: 40px auto;
+
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid #ff0000;
+  border-radius: 20px;
+
+  padding: 25px;
+
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+.tabela h6 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: white;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tabela table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.tabela table thead {
+  background: #ff0000;
+}
+
+.tabela table thead th {
+  padding: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.tabela table tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
+}
+
+.tabela table tbody tr:hover {
+  background: rgba(255, 0, 0, 0.2);
+}
+
+.tabela table tbody td {
+  padding: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+}
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+@media (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .graficos div {
+    height: 200px;
+  }
+
+  .tabela table thead {
+    display: none;
+  }
+
+  .tabela table,
+  .tabela table tbody,
+  .tabela table tr,
+  .tabela table td {
+    display: block;
+    width: 100%;
+  }
+
+  .tabela table tr {
+    margin-bottom: 15px;
+    border-radius: 15px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .tabela table td {
+    text-align: right;
+    padding: 10px;
+    position: relative;
+  }
+
+  .tabela table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+    color: #ff0000;
+    text-transform: uppercase;
+  }
+}
