@@ -12,7 +12,8 @@ export default function Login() {
         
         <div className="login-left">
           <h1>Bem-vindo!</h1>
-          <p>Faça login para continuar.</p>
+          <h2>Curiosidade</h2>
+          <p>ângelo primeiro homem a ter um dinossáuro de estimação</p>
         </div>
 
         <div className="login-right">
@@ -41,11 +42,9 @@ export default function Login() {
               <label htmlFor="senha">Senha</label>
             </div>
 
-            <button className="btn-login">Entrar</button>
+            <Link to='/dashboard' className="btn-login">Entrar</Link>
 
-            <p className="register-text">
-              Não tem conta? <Link to="/">Criar conta</Link>
-            </p>
+            <p><Link to="/register" className="link-secondary" link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover>Não tem conta? Cadastre-se</Link></p>
           </form>
         </div>
 
