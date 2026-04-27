@@ -1,0 +1,123 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(120deg, #7a0000, #000000);
+  min-height: 100vh;
+  color: white;
+}
+
+/* CONTAINER */
+.container-cadastro {
+  width: 90%;
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 35px;
+
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid #ff0000;
+  border-radius: 20px;
+
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.8);
+}
+
+/* TÍTULO */
+.container-cadastro h2 {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 25px;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* FORM */
+.container-cadastro form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* LABEL */
+.container-cadastro label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #bbbbbb;
+  margin-top: 10px;
+}
+
+/* INPUT */
+.container-cadastro input {
+  width: 100%;
+  padding: 14px;
+
+  border-radius: 12px;
+  border: 1px solid #ff0000;
+
+  background: rgba(20, 20, 20, 0.9);
+  color: white;
+
+  font-size: 14px;
+  outline: none;
+
+  transition: 0.3s ease;
+}
+
+.container-cadastro input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.container-cadastro input:focus {
+  border: 1px solid #ff0000;
+  box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.6);
+}
+
+/* BOTÃO */
+.container-cadastro button {
+  margin-top: 20px;
+  padding: 14px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #ff0000;
+  color: white;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.container-cadastro button:hover {
+  background: #c70000;
+  box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.7);
+  transform: translateY(-3px);
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  .container-cadastro {
+    padding: 25px;
+    margin: 40px auto;
+  }
+
+  .container-cadastro h2 {
+    font-size: 18px;
+  }
+
+  .container-cadastro input {
+    padding: 12px;
+  }
+
+  .container-cadastro button {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
